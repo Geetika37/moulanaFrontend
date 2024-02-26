@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:moulanafrontend/pages/LoginPage2.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -41,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
         
-              SizedBox(height: 105,),
+              SizedBox(height: 95,),
               IntlPhoneField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -52,7 +53,9 @@ class _LoginPageState extends State<LoginPage> {
         
               SizedBox(
                 width: 290,
-                child: ElevatedButton(onPressed: (){}, child: Text("Continue"),
+                child: ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage2()));
+                }, child: Text("Continue"),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.teal.shade800,foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                 ),

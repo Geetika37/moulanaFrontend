@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:moulanafrontend/pages/Container1.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -38,13 +41,13 @@ class _homePageState extends State<homePage> {
           
                     ),
                     Positioned(
-                    top: 60,
+                    top: 40,
                     left: 40,
-                    right: 70,
+                    right: 85,
                     bottom: 10,
                     child: Text("അശ്അരീ ത്വരീഖത്തും ശാഫിഈ മാർഗ്ഗവും അതിജാഗ്രതയോടെ പ്രോജ്വലിപ്പിച്ചു  സത്യസരണിയെ പ്രകാശിപ്പിക്കുന്ന മഹാഗുരു മൗലാനാ നജീബുസ്താദിന്റെ വാ- വര മൊഴികളിൽ നിന്നും ഒരല്പം അവിടുത്തെ പിരിശക്കാർ "
                     "കോർത്തുവച്ചതാണിത്, സ്വീകരിച്ചാലും.",
-              maxLines: 6,
+              maxLines: 7,
               style: TextStyle(color: Colors.white,fontSize: 12,fontWeight: FontWeight.w300),),
               ),
                   ],
@@ -60,9 +63,7 @@ class _homePageState extends State<homePage> {
                         Stack(
                             children: [
                               InkWell(
-                                onTap: (){
-                                  print('object');
-                                },
+                                onTap: ()=> Get.to(()=>Container1()),
                                 child: Container(
                                   padding: EdgeInsets.all(20),
                                   width: 163,
@@ -74,11 +75,17 @@ class _homePageState extends State<homePage> {
                                 ),
                               ),
                               Positioned(
-                                  top: 30,
-                                  left: 20,
-                                  child: Image.asset("assets/pic1.png")
+                                top: 20,
+                                left: 20,
 
-                              )
+                                  child: Text(
+                                    "ചോദ്യോത്ത\n"+"രങ്ങൾ",
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+
                             ]
                         ),
 
@@ -96,8 +103,10 @@ class _homePageState extends State<homePage> {
                               ),
                               Positioned(
                                   top: 30,
-                                  left: 20,
-                                  child: Image.asset("assets/pic2.png")
+                                  left: 15,
+
+                                    child: Text("വീഡിയോകൾ ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+
           
                               )
                             ]
@@ -118,10 +127,12 @@ class _homePageState extends State<homePage> {
                               ),
                               Positioned(
                                   top: 30,
-                                  left: 20,
-                                  child: Image.asset("assets/pic3.png")
+                                  left: 15,
+
+                                    child: Text("പുസ്തകങ്ങൾ",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+                                  )
           
-                              )
+
                             ]
                         ),
           
@@ -143,9 +154,11 @@ class _homePageState extends State<homePage> {
                                 ),
                               ),
                               Positioned(
-                                  top: 30,
+                                  top: 26,
                                   left: 20,
-                                  child: Image.asset("assets/pic4.png")
+
+                                    child: Text("ലേഖനങ്ങൾ",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+
           
                               )
                             ]
@@ -167,7 +180,9 @@ class _homePageState extends State<homePage> {
                               Positioned(
                                   top: 100,
                                   left: 20,
-                                  child: Image.asset("assets/pic5.png")
+
+                                    child: Text("ഓഡിയോകൾ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+
 
                               )
                             ]
@@ -189,7 +204,9 @@ class _homePageState extends State<homePage> {
                               Positioned(
                                   top: 30,
                                   left: 20,
-                                  child: Image.asset("assets/pic6.png")
+
+                                    child: Text("വിർദുകൾ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+
 
                               )
                             ]

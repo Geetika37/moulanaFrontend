@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:moulanafrontend/pages/home.dart';
 
 class LoginPage2 extends StatefulWidget {
@@ -76,8 +77,7 @@ class _LoginPage2State extends State<LoginPage2> {
                 width: 290,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => homePage()));
+                    Get.to(()=>homePage());
                   },
                   child: Text("Login"),
                   style: ElevatedButton.styleFrom(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:moulanafrontend/pages/LoginPage.dart';
 
 void main()
@@ -11,7 +12,7 @@ class home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       home: LoginPage(),
     );
   }

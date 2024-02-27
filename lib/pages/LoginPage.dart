@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:moulanafrontend/pages/LoginPage2.dart';
 
@@ -54,7 +55,8 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 width: 290,
                 child: ElevatedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage2()));
+                  Get.to(()=>LoginPage2());
+                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage2()));
                 }, child: Text("Continue"),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.teal.shade800,foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))

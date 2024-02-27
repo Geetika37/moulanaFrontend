@@ -13,6 +13,7 @@ class _LoginPage2State extends State<LoginPage2> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           padding: EdgeInsets.all(30),

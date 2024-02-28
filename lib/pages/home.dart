@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:moulanafrontend/pages/Container1.dart';
 import 'package:moulanafrontend/pages/Container2.dart';
+import 'package:moulanafrontend/pages/Container3.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -29,6 +30,7 @@ class _homePageState extends State<homePage> {
                   title: Image.asset("assets/logo.png"),
                   trailing: Image.asset("assets/Group 12712.png"),
                 ),
+
                 Stack(
                   children: [
                     Container(
@@ -112,8 +114,6 @@ class _homePageState extends State<homePage> {
                                   left: 15,
 
                                     child: Text("വീഡിയോകൾ ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-
-          
                               )
                             ]
                         ),
@@ -150,12 +150,15 @@ class _homePageState extends State<homePage> {
                         // first one
                         Stack(
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(20),
-                                width: 163,
-                                height: 156,
-                                decoration: new BoxDecoration(
-                                  image: new DecorationImage(image: AssetImage("assets/Group 427318378.png"),
+                              InkWell(
+                                onTap: ()=>Get.to(()=>Container3()),
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  width: 163,
+                                  height: 156,
+                                  decoration: new BoxDecoration(
+                                    image: new DecorationImage(image: AssetImage("assets/Group 427318378.png"),
+                                    ),
                                   ),
                                 ),
                               ),

@@ -101,6 +101,9 @@ flutter:
      - assets/vector14.png
      - assets/vector15.png
      - assets/backbg.png
+     - assets/bg1.png
+     - assets/contpic1.png
+     - assets/contpic2.png
      -
   #   - images/a_dot_ham.jpeg
 

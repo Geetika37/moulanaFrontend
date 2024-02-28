@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:moulanafrontend/pages/Container1.dart';
+import 'package:moulanafrontend/pages/Container2.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -60,6 +61,7 @@ class _homePageState extends State<homePage> {
           
                     Expanded(child: Column(
                       children: [
+                        
                         // first one
                         Stack(
                             children: [
@@ -93,12 +95,15 @@ class _homePageState extends State<homePage> {
                         // second one
                         Stack(
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(20),
-                                width: 163,
-                                height: 156,
-                                decoration: new BoxDecoration(
-                                  image: new DecorationImage(image: AssetImage("assets/Group 427318381.png"),
+                              InkWell(
+                                onTap: ()=>Get.to(()=>Container2()),
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  width: 163,
+                                  height: 156,
+                                  decoration: new BoxDecoration(
+                                    image: new DecorationImage(image: AssetImage("assets/Group 427318381.png"),
+                                    ),
                                   ),
                                 ),
                               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:moulanafrontend/pages/Container41.dart';
 import 'package:moulanafrontend/pages/home.dart';
 
 class Container4 extends StatefulWidget {
@@ -83,42 +84,55 @@ class _Container4State extends State<Container4> {
                 child: Row(
                   children: [
         
-                    Container(
-                      child: Column(
-                        children: [
-                          Image.asset("assets/book1.png"),
-                          Text("പ്രവാചകത്വം..... ",style: TextStyle(fontSize: 10),)
-                        ],
-                      )
-                    ),
-                    SizedBox(width: 10,),
-                    Container(
+                    InkWell(
+                      onTap: ()=>Get.to(()=>Container41()),
+                      child: Container(
                         child: Column(
                           children: [
-                            Image.asset("assets/book2.png"),
-                            Text("മുസ്ലിം ഇന്ത്യയുടെ ...",style: TextStyle(fontSize: 10),)
+                            Image.asset("assets/book1.png"),
+                            Text("പ്രവാചകത്വം..... ",style: TextStyle(fontSize: 10),)
                           ],
                         )
+                      ),
+                    ),
+                    SizedBox(width: 10,),
+
+                    InkWell(
+                      onTap: ()=>Get.to(()=>Container41()),
+                      child: Container(
+                          child: Column(
+                            children: [
+                              Image.asset("assets/book2.png"),
+                              Text("മുസ്ലിം ഇന്ത്യയുടെ ...",style: TextStyle(fontSize: 10),)
+                            ],
+                          )
+                      ),
                     ),
                     SizedBox(width: 5,),
         
-                    Container(
-                        child: Column(
-                          children: [
-                            Image.asset("assets/book3.png"),
-                            Text("മുസ്ലിം സാമൂഹ്യ ജ..",style: TextStyle(fontSize: 10),)
-                          ],
-                        )
+                    InkWell(
+                      onTap: ()=>Get.to(()=>Container41()),
+                      child: Container(
+                          child: Column(
+                            children: [
+                              Image.asset("assets/book3.png"),
+                              Text("മുസ്ലിം സാമൂഹ്യ ജ..",style: TextStyle(fontSize: 10),)
+                            ],
+                          )
+                      ),
                     ),
                     SizedBox(width: 4,),
         
-                    Container(
-                        child: Column(
-                          children: [
-                            Image.asset("assets/book4.png"),
-                            Text("അറഫാ പ്രഭാഷണം",style: TextStyle(fontSize: 10),)
-                          ],
-                        )
+                    InkWell(
+                      onTap: ()=>Get.to(()=>Container41()),
+                      child: Container(
+                          child: Column(
+                            children: [
+                              Image.asset("assets/book4.png"),
+                              Text("അറഫാ പ്രഭാഷണം",style: TextStyle(fontSize: 10),)
+                            ],
+                          )
+                      ),
                     ),
                   ],
                 ),
@@ -136,54 +150,59 @@ class _Container4State extends State<Container4> {
 
               //container1
 
-              Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xFFffffff),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 5.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(
-                        3.0,
-                        3.0,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Container41()));
+                },
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFFffffff),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 5.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(
+                          3.0,
+                          3.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image(image: AssetImage("assets/book5.png")),
+
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("പ്രവാചകത്വം ഖുർആനിൽ "),
+                            Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
+                            Row(
+                              children: [
+                                Image(image: AssetImage("assets/star.png")),
+                                SizedBox(width: 5,),
+                                Text("4.0",style: TextStyle(fontSize: 12),)
+                              ],
+                            ),
+                            new Divider(
+                              color: Colors.grey.shade400,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.attach_money,size: 15,),
+                                Text("280"),
+                                SizedBox(width: 130,),
+                                Image(image: AssetImage("assets/save.png"))
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image(image: AssetImage("assets/book5.png")),
-        
-                    Flexible(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("പ്രവാചകത്വം ഖുർആനിൽ "),
-                          Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
-                          Row(
-                            children: [
-                              Image(image: AssetImage("assets/star.png")),
-                              SizedBox(width: 5,),
-                              Text("4.0",style: TextStyle(fontSize: 12),)
-                            ],
-                          ),
-                          new Divider(
-                            color: Colors.grey.shade400,
-                          ),
-                          Row(
-                            children: [
-                              Icon(Icons.attach_money,size: 15,),
-                              Text("280"),
-                              SizedBox(width: 130,),
-                              Image(image: AssetImage("assets/save.png"))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-        
-                  ],
+
+                    ],
+                  ),
                 ),
               ),
         
@@ -191,53 +210,58 @@ class _Container4State extends State<Container4> {
 
               //container2
 
-              Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xFFffffff),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 15.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(
-                        5.0,
-                        5.0,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Container41()));
+                },
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFFffffff),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 15.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(
+                          5.0,
+                          5.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image(image: AssetImage("assets/book6.png")),
+
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("പ്രവാചകത്വം ഖുർആനിൽ "),
+                            Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
+                            Row(
+                              children: [
+                                Image(image: AssetImage("assets/star.png")),
+                                SizedBox(width: 5,),
+                                Text("4.0",style: TextStyle(fontSize: 12),)
+                              ],
+                            ),
+                            new Divider(
+                              color: Colors.grey.shade400,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.attach_money,size: 15,),
+                                Text("280"),
+                                SizedBox(width: 130,),
+                                Image(image: AssetImage("assets/save.png"))
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image(image: AssetImage("assets/book6.png")),
-        
-                    Flexible(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("പ്രവാചകത്വം ഖുർആനിൽ "),
-                          Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
-                          Row(
-                            children: [
-                              Image(image: AssetImage("assets/star.png")),
-                              SizedBox(width: 5,),
-                              Text("4.0",style: TextStyle(fontSize: 12),)
-                            ],
-                          ),
-                          new Divider(
-                            color: Colors.grey.shade400,
-                          ),
-                          Row(
-                            children: [
-                              Icon(Icons.attach_money,size: 15,),
-                              Text("280"),
-                              SizedBox(width: 130,),
-                              Image(image: AssetImage("assets/save.png"))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
         
@@ -245,108 +269,118 @@ class _Container4State extends State<Container4> {
 
               // container3
 
-              Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xFFffffff),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 15.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(
-                        5.0,
-                        5.0,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Container41()));
+                },
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFFffffff),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 15.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(
+                          5.0,
+                          5.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image(image: AssetImage("assets/book7.png")),
+
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("പ്രവാചകത്വം ഖുർആനിൽ "),
+                            Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
+                            Row(
+                              children: [
+                                Image(image: AssetImage("assets/star.png")),
+                                SizedBox(width: 5,),
+                                Text("4.0",style: TextStyle(fontSize: 12),)
+                              ],
+                            ),
+                            new Divider(
+                              color: Colors.grey.shade400,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.attach_money,size: 15,),
+                                Text("280"),
+                                SizedBox(width: 130,),
+                                Image(image: AssetImage("assets/save.png"))
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image(image: AssetImage("assets/book7.png")),
-        
-                    Flexible(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("പ്രവാചകത്വം ഖുർആനിൽ "),
-                          Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
-                          Row(
-                            children: [
-                              Image(image: AssetImage("assets/star.png")),
-                              SizedBox(width: 5,),
-                              Text("4.0",style: TextStyle(fontSize: 12),)
-                            ],
-                          ),
-                          new Divider(
-                            color: Colors.grey.shade400,
-                          ),
-                          Row(
-                            children: [
-                              Icon(Icons.attach_money,size: 15,),
-                              Text("280"),
-                              SizedBox(width: 130,),
-                              Image(image: AssetImage("assets/save.png"))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-        
-                  ],
+
+                    ],
+                  ),
                 ),
               ),
         
         
               SizedBox(height: 10,),
         
-              Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xFFffffff),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 15.0,
-                      spreadRadius: 2.0,
-                      offset: Offset(
-                        5.0,
-                        5.0,
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Container41()));
+                },
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFFffffff),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 15.0,
+                        spreadRadius: 2.0,
+                        offset: Offset(
+                          5.0,
+                          5.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image(image: AssetImage("assets/book5.png")),
+
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("പ്രവാചകത്വം ഖുർആനിൽ "),
+                            Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
+                            Row(
+                              children: [
+                                Image(image: AssetImage("assets/star.png")),
+                                SizedBox(width: 5,),
+                                Text("4.0",style: TextStyle(fontSize: 12),)
+                              ],
+                            ),
+                            new Divider(
+                              color: Colors.grey.shade400,
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.attach_money,size: 15,),
+                                Text("280"),
+                                SizedBox(width: 130,),
+                                Image(image: AssetImage("assets/save.png"))
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                ),
-                child: Row(
-                  children: [
-                    Image(image: AssetImage("assets/book5.png")),
-        
-                    Flexible(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text("പ്രവാചകത്വം ഖുർആനിൽ "),
-                          Text("പി.റഹ്മാൻ ",style: TextStyle(fontSize: 10),),
-                          Row(
-                            children: [
-                              Image(image: AssetImage("assets/star.png")),
-                              SizedBox(width: 5,),
-                              Text("4.0",style: TextStyle(fontSize: 12),)
-                            ],
-                          ),
-                          new Divider(
-                            color: Colors.grey.shade400,
-                          ),
-                          Row(
-                            children: [
-                              Icon(Icons.attach_money,size: 15,),
-                              Text("280"),
-                              SizedBox(width: 130,),
-                              Image(image: AssetImage("assets/save.png"))
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-        
-                  ],
+
+                    ],
+                  ),
                 ),
               )
         

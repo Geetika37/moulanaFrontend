@@ -115,7 +115,13 @@ flutter:
      - assets/book9.png
      - assets/star.png
      - assets/save.png
+     - assets/icon1.png
+     - assets/icon6.png
+     - assets/Notification - 3.png
+     - assets/Ellipse 687.png
+     - assets/Rectangle 22.png
      - assets/whatsapp.png
+     - assets/maintain-3 1.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

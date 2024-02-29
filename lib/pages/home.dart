@@ -5,7 +5,7 @@ import 'package:moulanafrontend/pages/Container1.dart';
 import 'package:moulanafrontend/pages/Container2.dart';
 import 'package:moulanafrontend/pages/Container3.dart';
 import 'package:moulanafrontend/pages/Container4.dart';
-
+import 'package:moulanafrontend/pages/navBar.dart';
 class homePage extends StatefulWidget {
   const homePage({super.key});
 
@@ -19,18 +19,23 @@ class _homePageState extends State<homePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        
+        drawer: navBar(
+
+        ),
+        appBar: AppBar(
+          toolbarHeight: 90,
+          actions: [
+            Image(image: AssetImage("assets/logo.png")),
+            SizedBox(width: 60,),
+            Image(image: AssetImage("assets/Group 12712.png")),
+            SizedBox(width: 25,),
+          ],
+        ),
         body: SingleChildScrollView(
           child: Container(
             child: Column(
               children: [
-                ListTile(
-                  leading: SizedBox(
-                    child: Image.asset("assets/menu.png"),
-                  ),
-                  title: Image.asset("assets/logo.png"),
-                  trailing: Image.asset("assets/Group 12712.png"),
-                ),
+
 
                 Stack(
                   children: [

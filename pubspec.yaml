@@ -104,7 +104,16 @@ flutter:
      - assets/bg1.png
      - assets/contpic1.png
      - assets/contpic2.png
-     -
+     - assets/Rectangle.png
+     - assets/book1.png
+     - assets/book2.png
+     - assets/book3.png
+     - assets/book4.png
+     - assets/book5.png
+     - assets/book6.png
+     - assets/book7.png
+     - assets/star.png
+     - assets/save.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

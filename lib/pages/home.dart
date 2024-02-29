@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:moulanafrontend/pages/Container1.dart';
 import 'package:moulanafrontend/pages/Container2.dart';
 import 'package:moulanafrontend/pages/Container3.dart';
+import 'package:moulanafrontend/pages/Container4.dart';
 
 class homePage extends StatefulWidget {
   const homePage({super.key});
@@ -122,12 +123,15 @@ class _homePageState extends State<homePage> {
 
                         Stack(
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(20),
-                                width: 163,
-                                height: 153,
-                                decoration: new BoxDecoration(
-                                  image: new DecorationImage(image: AssetImage("assets/Group 427318382.png"),
+                              InkWell(
+                                onTap: ()=>Get.to(()=>Container4()),
+                                child: Container(
+                                  padding: EdgeInsets.all(20),
+                                  width: 163,
+                                  height: 153,
+                                  decoration: new BoxDecoration(
+                                    image: new DecorationImage(image: AssetImage("assets/Group 427318382.png"),
+                                    ),
                                   ),
                                 ),
                               ),
